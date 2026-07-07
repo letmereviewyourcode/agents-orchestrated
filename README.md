@@ -38,7 +38,7 @@ the open **AG-UI protocol** — and when the money gets serious, the *process*
 pauses for a human, visibly, in Camunda Operate. Fully runnable, even without
 API keys.
 
-**Code:** [`camunda-agui-wealth-demo`](https://github.com/letmereviewyourcode/camunda-agui-wealth-demo)
+**Watch:** [the 2:30 film on LinkedIn](https://www.linkedin.com/posts/zishanalikhan_agenticai-agui-camunda-ugcPost-7480344185674313728-ffd8) · **Code:** [`camunda-agui-wealth-demo`](https://github.com/letmereviewyourcode/camunda-agui-wealth-demo)
 
 ---
 
