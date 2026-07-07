@@ -2,17 +2,15 @@
 
 **Autonomy is table stakes. The moat is everything around the agent.**
 
-A weekly build series. Every episode takes one layer of the agentic stack that
-everyone is talking about, builds something real on it, and ships the code —
-so you can run it, break it, and steal the pattern.
+A series of real builds on the agentic stack. Each episode takes one layer
+everyone is talking about — agent loops, generative UI, agents that pay — and
+turns it into a working system, then ships the film and the code. These aren't
+toys: every build carries the parts that decide whether agents survive
+production — verification, orchestration, human oversight, grounding, and an
+audit trail.
 
-The through-line: the model is the easy part. What separates a demo from a
-system is what surrounds the agent — the **verification loops**, the
-**orchestration**, the **human gates**, the **grounding**, the **audit trail**.
-That's what each episode is actually about.
-
-📺 New episodes on [LinkedIn](https://www.linkedin.com/in/zishanalikhan) ·
-every build is a public repo on this profile.
+📺 Episodes land on [LinkedIn](https://www.linkedin.com/in/zishanalikhan).
+Every build is a public repo on this profile.
 
 ---
 
@@ -22,9 +20,8 @@ every build is a public repo on this profile.
 
 > He stopped writing code. He writes loops.
 
-Every agentic coding tool converged on the same shape: give the agent a goal,
-let it iterate, verify each pass. The episode breaks down why the loop you can
-**audit** is the only loop that ships.
+Every agentic coding tool converged on the same shape: goal in, iterate,
+verify each pass. Why the loop you can **audit** is the only loop that ships.
 
 **Code:** [`what-are-loops`](https://github.com/letmereviewyourcode/what-are-loops)
 
@@ -32,21 +29,22 @@ let it iterate, verify each pass. The episode breaks down why the loop you can
 
 > Agents can stream the whole **interface**, not just text.
 
-AURUM: a (fictional) private bank onboarding real clients on **Camunda 8**,
-where every agent decision streams to the browser as live, clickable UI over
-the open **AG-UI protocol** — and when the money gets serious, the *process*
-pauses for a human, visibly, in Camunda Operate. Fully runnable, even without
-API keys.
+AURUM: a (fictional) private bank onboarding clients on **Camunda 8**. Every
+agent decision streams to the browser as live, clickable UI over the open
+**AG-UI protocol** — and when the money gets serious, the *process* pauses for
+a human, visibly, in Camunda Operate. Fully runnable, even without API keys.
 
-**Watch:** [the 2:30 film on LinkedIn](https://www.linkedin.com/posts/zishanalikhan_agenticai-agui-camunda-ugcPost-7480344185674313728-ffd8) · **Code:** [`camunda-agui-wealth-demo`](https://github.com/letmereviewyourcode/camunda-agui-wealth-demo)
+**Watch:** [the 2:30 film](https://www.linkedin.com/posts/zishanalikhan_agenticai-agui-camunda-ugcPost-7480344185674313728-ffd8) ·
+**Code:** [`camunda-agui-wealth-demo`](https://github.com/letmereviewyourcode/camunda-agui-wealth-demo)
 
 ---
 
-**Next: EP 03 · agents that pay.**
+**Next up: EP 03 · agents that pay.**
 
-## Who's behind this
+## Behind the series
 
-**Zishan Ali Khan** — I build agentic systems on process orchestration for a
-living and this series is where I show the parts that survive contact with
-production. Say hi on [LinkedIn](https://www.linkedin.com/in/zishanalikhan) —
-especially if you're building on any of these layers yourself.
+**Zishan Ali Khan** — Enterprise AI GTM & Solutions at Camunda. My day job is
+putting agents inside real business processes; this series is where I build
+each layer end to end and publish what holds up. On
+[LinkedIn](https://www.linkedin.com/in/zishanalikhan) if you're building on
+any of these layers.
