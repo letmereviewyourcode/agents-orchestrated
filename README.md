@@ -37,9 +37,24 @@ a human, visibly, in Camunda Operate. Fully runnable, even without API keys.
 **Watch:** [the 2:30 film](https://www.linkedin.com/posts/zishanalikhan_agenticai-agui-camunda-ugcPost-7480344185674313728-ffd8) ·
 **Code:** [`camunda-agui-wealth-demo`](https://github.com/letmereviewyourcode/camunda-agui-wealth-demo)
 
+### EP 03 · AP2 — *cryptographic authority + governance is the moat*
+
+> An agent with a signed spending limit. Then three times it refuses to spend.
+
+Agentic commerce comes down to one question: how do you let an AI buy things
+for you *safely*? **AP2** (the Agent Payments Protocol, started by Google and
+handed to the **FIDO Alliance**) answers it with signed mandates: you sign the
+rules, the agent signs the actual cart, and the merchant verifies both before
+taking a cent. I gave an agent a $7,000 ceiling, let it buy World Cup tickets
+while I slept, then tried to break it. Tampering with the signed limit gets
+refused by cryptography; getting close to the limit gets escalated to me by a
+**Camunda 8** decision table. Every hop is one auditable process.
+
+**Code:** [`camunda-ap2-payments-demo`](https://github.com/letmereviewyourcode/camunda-ap2-payments-demo)
+
 ---
 
-**Next up: EP 03 · agents that pay.**
+**Next up: EP 04 · model routing, and what it costs you to pick wrong.**
 
 ## Behind the series
 
