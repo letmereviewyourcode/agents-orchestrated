@@ -50,6 +50,7 @@ while I slept, then tried to break it. Tampering with the signed limit gets
 refused by cryptography; getting close to the limit gets escalated to me by a
 **Camunda 8** decision table. Every hop is one auditable process.
 
+**Watch:** [the 3:47 film](https://www.linkedin.com/posts/zishanalikhan_agenticcommerce-ap2-camunda-ugcPost-7496996686808903680-UVxw) ·
 **Code:** [`camunda-ap2-payments-demo`](https://github.com/letmereviewyourcode/camunda-ap2-payments-demo)
 
 ---
