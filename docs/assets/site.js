@@ -1,16 +1,12 @@
 (function () {
-  const toggle = document.querySelector(".nav-toggle");
-  const links = document.querySelector(".nav-links");
-  if (toggle && links) {
-    toggle.addEventListener("click", () => {
-      const open = links.classList.toggle("open");
-      toggle.setAttribute("aria-expanded", String(open));
-    });
-    links.querySelectorAll("a").forEach((a) => {
-      a.addEventListener("click", () => {
-        links.classList.remove("open");
-        toggle.setAttribute("aria-expanded", "false");
-      });
-    });
-  }
+  const root = document.documentElement;
+  const stored = localStorage.getItem("theme");
+  if (stored === "light") root.classList.remove("dark");
+  else if (stored === "dark") root.classList.add("dark");
+  else if (!root.classList.contains("dark")) root.classList.add("dark");
+
+  document.getElementById("theme-toggle")?.addEventListener("click", () => {
+    const isDark = root.classList.toggle("dark");
+    localStorage.setItem("theme", isDark ? "dark" : "light");
+  });
 })();

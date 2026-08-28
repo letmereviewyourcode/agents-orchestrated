@@ -251,7 +251,7 @@ function renderView(viewId, selectedId) {
 
   const defs = el("defs", {}, [
     el("marker", { id: "arrow", viewBox: "0 0 10 10", refX: "8", refY: "5", markerWidth: "7", markerHeight: "7", orient: "auto-start-reverse" }, [
-      el("path", { d: "M 0 0 L 10 5 L 0 10 z", fill: "#3a3a40" }),
+      el("path", { d: "M 0 0 L 10 5 L 0 10 z", fill: "currentColor" }),
     ]),
   ]);
   svg.appendChild(defs);
@@ -276,21 +276,26 @@ function renderView(viewId, selectedId) {
       "data-id": node.id,
       "aria-label": node.label,
     });
+    const kind =
+      node.fill === "#13261f" ? "is-surface" :
+      (node.fill === "#2a2114" || node.fill === "#2a140f" || node.fill === "#1f1c14") ? "is-check" :
+      "is-base";
+    g.classList.add(kind);
     g.appendChild(el("rect", {
-      x: node.x, y: node.y, width: node.w, height: node.h, rx: "12",
-      fill: node.fill || "#161618",
-      stroke: selectedId === node.id ? "#ef9f27" : "#2a2a2e",
+      x: node.x, y: node.y, width: node.w, height: node.h, rx: "10",
       "stroke-width": selectedId === node.id ? "2" : "1",
     }));
     g.appendChild(el("text", {
+      class: "n-label",
       x: node.x + 16, y: node.y + (node.sub ? node.h / 2 - 4 : node.h / 2 + 5),
-      fill: "#f2f2f0", "font-size": "13", "font-weight": "600",
+      "font-size": "13", "font-weight": "600",
       "font-family": "Inter, system-ui, sans-serif",
     }, [node.label]));
     if (node.sub) {
       g.appendChild(el("text", {
+        class: "n-sub",
         x: node.x + 16, y: node.y + node.h / 2 + 14,
-        fill: "#9c9a92", "font-size": "11",
+        "font-size": "11",
         "font-family": "JetBrains Mono, ui-monospace, monospace",
       }, [node.sub]));
     }
@@ -330,7 +335,7 @@ function inspect(node) {
     <p>${node.body}</p>
     ${node.path ? `<div class="path">${node.path}</div>` : ""}
     <div class="links">
-      ${fileUrl ? `<a class="btn btn-ghost" href="${fileUrl}" style="padding:8px 12px;font-size:13px">Open on GitHub</a>` : ""}
+      ${fileUrl ? `<a class="btn" href="${fileUrl}">Open on GitHub</a>` : ""}
       ${node.repo ? `<span class="node-chip">${node.repo}</span>` : ""}
     </div>`;
 }
