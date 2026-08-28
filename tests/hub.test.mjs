@@ -63,15 +63,17 @@ test("shipped episodes plus queued arc are listed", () => {
   }
 });
 
-test("assets are relative so a path prefix still works", () => {
+test("assets use the /agents-orchestrated prefix so nested clean URLs still load", () => {
   const index = read("index.html");
   const cmap = read("codemap.html");
-  assert.match(index, /href="assets\/site\.css"/);
-  assert.match(index, /src="assets\/site\.js"/);
-  assert.doesNotMatch(index, /href="\/assets\//);
-  assert.match(cmap, /href="assets\/site\.css"/);
-  assert.match(cmap, /src="assets\/codemap\.js"/);
-  assert.match(index, /href="codemap\.html"/);
+  for (const html of [index, cmap]) {
+    assert.match(html, /href="\/agents-orchestrated\/assets\/site\.css"/);
+    assert.match(html, /src="\/agents-orchestrated\/assets\/site\.js"/);
+    assert.doesNotMatch(html, /href="assets\//);
+    assert.doesNotMatch(html, /src="assets\//);
+  }
+  assert.match(cmap, /src="\/agents-orchestrated\/assets\/codemap\.js"/);
+  assert.match(index, /href="\/agents-orchestrated\/codemap\/"/);
 });
 
 test("codemap has the five views and inspector", () => {
