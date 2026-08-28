@@ -1,7 +1,7 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "installCommand": "echo skip",
-  "buildCommand": "node --test tests/hub.test.mjs",
+  "buildCommand": "node --test tests/hub.test.mjs && node scripts/stage-prefix.mjs",
   "outputDirectory": "docs",
   "cleanUrls": true,
   "trailingSlash": true,

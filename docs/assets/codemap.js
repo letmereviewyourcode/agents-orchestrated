@@ -289,14 +289,14 @@ function renderView(viewId, selectedId) {
       class: "n-label",
       x: node.x + 16, y: node.y + (node.sub ? node.h / 2 - 4 : node.h / 2 + 5),
       "font-size": "13", "font-weight": "600",
-      "font-family": "Inter, system-ui, sans-serif",
+      "font-family": '"Inter Variable", system-ui, sans-serif',
     }, [node.label]));
     if (node.sub) {
       g.appendChild(el("text", {
         class: "n-sub",
         x: node.x + 16, y: node.y + node.h / 2 + 14,
         "font-size": "11",
-        "font-family": "JetBrains Mono, ui-monospace, monospace",
+        "font-family": '"JetBrains Mono Variable", ui-monospace, monospace',
       }, [node.sub]));
     }
     g.addEventListener("click", (e) => {

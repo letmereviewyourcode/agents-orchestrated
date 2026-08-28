@@ -27,7 +27,7 @@ test("hub files exist", () => {
 test("hub is a companion, not the essay index", () => {
   const html = read("index.html");
   assert.match(html, /visual companion/i);
-  assert.match(html, /https:\/\/zishanalikhan\.com\/series\/agents-orchestrated\//);
+  assert.match(html, /https:\/\/zishanalikhan\.com\/series\/agents-orchestrated\/|href="\/series\/agents-orchestrated\/"/);
   assert.match(html, /canonical" href="https:\/\/zishanalikhan\.com\/agents-orchestrated\//);
   assert.doesNotMatch(html, /This page doesn't exist/);
 });
@@ -39,7 +39,11 @@ test("hub title and chrome match the personal site", () => {
   assert.match(html, /letmereview/);
   assert.match(html, /yourcode/);
   assert.match(html, /theme-toggle/);
-  assert.match(css, /Newsreader/);
+  assert.match(css, /Newsreader Variable/);
+  assert.match(css, /Inter Variable/);
+  assert.match(css, /\/_astro\/inter-latin-wght-normal/);
+  assert.doesNotMatch(html, /vercel\.app/);
+  assert.doesNotMatch(css, /fonts\.googleapis/);
 });
 
 test("shipped episodes plus queued arc are listed", () => {
@@ -85,7 +89,16 @@ test("codemap has the five views and inspector", () => {
 test("this repo does not ship the essay routes", () => {
   assert.equal(existsSync(join(docs, "series")), false);
   const index = read("index.html");
-  assert.doesNotMatch(index, /href="\/series\/agents-orchestrated\/"/);
+  assert.match(index, /href="\/series\/agents-orchestrated\/"/);
+});
+
+test("stage-prefix copies the hub under /agents-orchestrated", async () => {
+  const { spawnSync } = await import("node:child_process");
+  const r = spawnSync(process.execPath, [join(root, "scripts/stage-prefix.mjs")], { encoding: "utf8" });
+  assert.equal(r.status, 0, r.stderr || r.stdout);
+  assert.equal(existsSync(join(docs, "agents-orchestrated/index.html")), true);
+  assert.equal(existsSync(join(docs, "agents-orchestrated/codemap.html")), true);
+  assert.equal(existsSync(join(docs, "agents-orchestrated/assets/site.css")), true);
 });
 
 test("root vercel.json serves docs and prefixes /agents-orchestrated", () => {

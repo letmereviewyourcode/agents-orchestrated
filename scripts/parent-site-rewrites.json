@@ -1,16 +1,11 @@
 {
+  "comment": "Project routes on letmereviewyourcode-github-io. Regex so subpaths keep the prefix the hub actually serves.",
   "rewrites": [
     {
-      "source": "/agents-orchestrated",
-      "destination": "https://agents-orchestrated-hub.vercel.app/"
-    },
-    {
-      "source": "/agents-orchestrated/",
-      "destination": "https://agents-orchestrated-hub.vercel.app/"
-    },
-    {
-      "source": "/agents-orchestrated/:path*",
-      "destination": "https://agents-orchestrated-hub.vercel.app/:path*"
+      "src": "^/agents-orchestrated(/.*)?$",
+      "srcSyntax": "regex",
+      "dest": "https://agents-orchestrated-hub.vercel.app/agents-orchestrated$1",
+      "routeType": "rewrite"
     }
   ]
 }

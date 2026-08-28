@@ -4,6 +4,7 @@
   "type": "module",
   "scripts": {
     "test": "node --test tests/hub.test.mjs",
+    "stage": "node scripts/stage-prefix.mjs",
     "test:live": "node --test tests/live-essays.test.mjs",
     "test:parity": "node --test tests/deployed-parity.test.mjs",
     "test:all": "node --test tests/*.test.mjs"

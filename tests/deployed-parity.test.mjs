@@ -48,6 +48,7 @@ test("deployed hub matches local markers (or is still unpublished)", async (t) =
   }
   assert.ok(body.includes("codemap"), "deployed hub missing codemap");
   assert.ok(!body.includes("This page doesn't exist"), "deployed hub is still the personal-site 404");
+  assert.ok(!body.includes("agents-orchestrated-hub.vercel.app"), "deployed HTML still points at the Vercel app domain");
 });
 
 test("deployed codemap matches local views (or is still unpublished)", async (t) => {
