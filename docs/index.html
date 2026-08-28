@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Agents, Orchestrated — real builds on the agentic stack</title>
+  <meta name="description" content="A series of real builds on the agentic stack. Each episode takes one layer — agent loops, generative UI, agents that pay — and ships the film and the code. Autonomy is table stakes; the moat is everything around the agent." />
+  <meta property="og:title" content="Agents, Orchestrated" />
+  <meta property="og:description" content="Autonomy is table stakes. The moat is everything around the agent." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="assets/site.css" />
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <div class="wrap">
+    <header class="nav">
+      <a class="brand" href="index.html">
+        <img class="brand-mark" src="assets/favicon.svg" alt="" />
+        <span>
+          <span class="brand-kicker">Series</span>
+          <span class="brand-name">Agents, Orchestrated</span>
+        </span>
+      </a>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="#episodes">Episodes</a>
+        <a href="#stack">The stack</a>
+        <a href="codemap.html" class="nav-cta">Codemap</a>
+        <a href="https://github.com/letmereviewyourcode/agents-orchestrated">GitHub</a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero container">
+        <p class="eyebrow">Three episodes · one control plane</p>
+        <h1>Autonomy is table stakes.<br /><span class="accent">The moat is everything around the agent.</span></h1>
+        <p class="lede">
+          Real builds on the agentic stack. Each episode takes one layer everyone is talking about —
+          agent loops, generative UI, agents that pay — and turns it into a working system, then ships
+          the film and the code.
+        </p>
+        <div class="btn-row" style="justify-content:center">
+          <a class="btn btn-primary" href="#episodes">Watch the episodes</a>
+          <a class="btn btn-ghost" href="codemap.html">Visual codemap →</a>
+        </div>
+        <p class="hero-quote">These aren’t toys. Every build carries verification, orchestration, human oversight, grounding, and an audit trail.</p>
+
+        <div class="stats" aria-label="Series at a glance">
+          <div class="stat"><b>03</b><span>shipped episodes, one layer each</span></div>
+          <div class="stat"><b>04</b><span>open protocols in play: MCP, A2A, AG-UI, AP2</span></div>
+          <div class="stat"><b>$7k</b><span>signed spending ceiling the agent cannot override</span></div>
+          <div class="stat"><b>0</b><span>API keys required to run EP 02 in shadow mode</span></div>
+        </div>
+      </section>
+
+      <section class="section-sm container" id="moats">
+        <p class="eyebrow">What actually ships</p>
+        <h2>Four moats. Autonomy is not one of them.</h2>
+        <p class="lede">Every lab can loop now. The product is how you trust what it did.</p>
+        <div class="moats" style="margin-top:28px">
+          <article class="moat">
+            <div class="n">EP 01</div>
+            <h3>Verification</h3>
+            <p>Generate → run → check → repeat. “Done” is evidence, not vibes. The loop you can audit is the only loop that ships.</p>
+          </article>
+          <article class="moat">
+            <div class="n">EP 02</div>
+            <h3>HITL + orchestration</h3>
+            <p>The process pauses for a human, visibly, in Camunda Operate. The LLM is the language layer. The process is the orchestrator.</p>
+          </article>
+          <article class="moat">
+            <div class="n">EP 02</div>
+            <h3>Grounding</h3>
+            <p>What the agent can’t verify, it doesn’t invent. Knowledge-base retrieval is a process step, not a prompt prefix.</p>
+          </article>
+          <article class="moat">
+            <div class="n">EP 03</div>
+            <h3>Cryptographic authority</h3>
+            <p>You sign the rules. The agent signs the cart. The merchant verifies both. Tampering a number inside a signed token is a refusal, not a warning.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section container" id="episodes">
+        <p class="eyebrow">The series</p>
+        <h2>Episodes</h2>
+        <p class="lede" style="margin-bottom:36px">Films land on LinkedIn. Every build is a public repo.</p>
+
+        <article class="episode" id="ep01">
+          <div class="episode-copy">
+            <div class="episode-meta">
+              <span class="ep-num">EP 01 · Loops</span>
+              <span class="ep-moat">verification is the moat</span>
+            </div>
+            <h2>He stopped writing code. He writes loops.</h2>
+            <blockquote>Every agentic coding tool converged on the same shape: goal in, iterate, verify each pass.</blockquote>
+            <p>
+              Claude Code, Codex, and Antigravity all shipped a <code>/goal</code>-style command, independently, within months.
+              Autonomy stopped being the differentiator. How each loop decides it’s done — independent judge, tests-until-green,
+              auditable artifacts — is the product.
+            </p>
+            <p>
+              The film was itself a loop: one <code>/goal</code> pointed at a spec, then a four-layer verification pass
+              (compile → frame stills → locked copy → full render) before calling the job done.
+            </p>
+            <div class="btn-row">
+              <a class="btn btn-primary" href="https://www.linkedin.com/in/zishanalikhan">Watch on LinkedIn</a>
+              <a class="btn btn-ghost" href="https://github.com/letmereviewyourcode/what-are-loops">Code · what-are-loops</a>
+              <a class="btn btn-link" href="codemap.html#ep01">Map this episode</a>
+            </div>
+          </div>
+          <div>
+            <figure class="shot">
+              <img src="https://raw.githubusercontent.com/letmereviewyourcode/what-are-loops/main/out/map-2x2.png" alt="Two-by-two map of agentic coding loops: trigger vs verification, in-session vs cloud-persistent" />
+              <figcaption>the 2×2 — verification sits on the right</figcaption>
+            </figure>
+          </div>
+        </article>
+
+        <article class="episode reverse" id="ep02">
+          <div class="episode-copy">
+            <div class="episode-meta">
+              <span class="ep-num">EP 02 · AG-UI</span>
+              <span class="ep-moat teal">HITL + orchestration + grounding</span>
+            </div>
+            <h2>Agents can stream the whole interface, not just text.</h2>
+            <blockquote>AURUM: a private bank onboarding clients on Camunda 8.</blockquote>
+            <p>
+              Every agent decision streams to the browser as live, clickable UI over the open AG-UI protocol.
+              When the money gets serious, the process pauses for a human — visibly, in Camunda Operate.
+              MCP gives agents tools. A2A talks to other agents. AG-UI is the last mile: where work becomes something a human can click.
+            </p>
+            <p>
+              Fully runnable. Without API keys it still runs — shadow mode replays a deterministic scenario so you can watch the stream before wiring a cluster.
+            </p>
+            <div class="btn-row">
+              <a class="btn btn-primary" href="https://www.linkedin.com/posts/zishanalikhan_agenticai-agui-camunda-ugcPost-7480344185674313728-ffd8">Watch the 2:30 film</a>
+              <a class="btn btn-ghost" href="https://github.com/letmereviewyourcode/camunda-agui-wealth-demo">Code · camunda-agui-wealth-demo</a>
+              <a class="btn btn-link" href="codemap.html#ep02">Map this episode</a>
+            </div>
+          </div>
+          <div class="shot-pair">
+            <figure class="shot">
+              <img src="https://raw.githubusercontent.com/letmereviewyourcode/camunda-agui-wealth-demo/main/assets/screenshots/customer-view.png" alt="AURUM customer view with generative UI cards" />
+              <figcaption>customer</figcaption>
+            </figure>
+            <figure class="shot">
+              <img src="https://raw.githubusercontent.com/letmereviewyourcode/camunda-agui-wealth-demo/main/assets/screenshots/advisor-view.png" alt="AURUM advisor approval desk" />
+              <figcaption>advisor desk</figcaption>
+            </figure>
+          </div>
+        </article>
+
+        <article class="episode" id="ep03">
+          <div class="episode-copy">
+            <div class="episode-meta">
+              <span class="ep-num">EP 03 · AP2</span>
+              <span class="ep-moat gold">cryptographic authority + governance</span>
+            </div>
+            <h2>An agent with a signed spending limit. Then three times it refuses to spend.</h2>
+            <blockquote>How do you let an AI buy things for you safely?</blockquote>
+            <p>
+              AP2 — the Agent Payments Protocol, started by Google and handed to the FIDO Alliance — answers with signed mandates.
+              You sign the rules. The agent signs the cart. The merchant verifies both before taking a cent.
+            </p>
+            <p>
+              A $7,000 ceiling. World Cup tickets while you sleep. Tampering the signed limit is refused by cryptography;
+              getting close to the limit is escalated by a Camunda 8 decision table. Four paths: golden, tamper, HITL, breach.
+            </p>
+            <div class="btn-row">
+              <a class="btn btn-primary" href="https://www.linkedin.com/posts/zishanalikhan_agenticcommerce-ap2-camunda-ugcPost-7496996686808903680-UVxw">Watch the 3:47 film</a>
+              <a class="btn btn-ghost" href="https://github.com/letmereviewyourcode/camunda-ap2-payments-demo">Code · camunda-ap2-payments-demo</a>
+              <a class="btn btn-link" href="codemap.html#ep03">Map this episode</a>
+            </div>
+          </div>
+          <div class="shot-pair">
+            <figure class="shot">
+              <img src="https://raw.githubusercontent.com/letmereviewyourcode/camunda-ap2-payments-demo/main/docs/screenshots/01-customer-view-initial.png" alt="AP2 shopping agent customer view" />
+              <figcaption>customer</figcaption>
+            </figure>
+            <figure class="shot">
+              <img src="https://raw.githubusercontent.com/letmereviewyourcode/camunda-ap2-payments-demo/main/docs/screenshots/04-ticketvault-merchant-site.png" alt="TicketVault merchant site verifying the mandate chain" />
+              <figcaption>TicketVault merchant</figcaption>
+            </figure>
+          </div>
+        </article>
+      </section>
+
+      <section class="section container" id="stack">
+        <p class="eyebrow teal">How the layers compose</p>
+        <h2>The process is the orchestrator. The LLM is the language layer.</h2>
+        <p class="lede">
+          Each episode adds a layer around the agent. Read top-down: humans click, AG-UI carries the wire,
+          the loop runs, Camunda holds the token, policy and cryptography decide whether money moves.
+        </p>
+        <div class="stack" role="list">
+          <div class="stack-row" role="listitem">
+            <div class="layer">Humans</div>
+            <div><strong>Customer · advisor · operator · merchant</strong><br /><span>Three surfaces, one stream. The operator view is the “don’t take my word for it” log.</span></div>
+            <span class="pill ep02">EP 02–03</span>
+          </div>
+          <div class="stack-row" role="listitem">
+            <div class="layer">Wire</div>
+            <div><strong>AG-UI over SSE</strong><br /><span>TEXT_MESSAGE, TOOL_CALL, GENERATIVE_UI, USER_TASK — typed events, not a chat dump.</span></div>
+            <span class="pill ep02">EP 02–03</span>
+          </div>
+          <div class="stack-row" role="listitem">
+            <div class="layer">Loop</div>
+            <div><strong>Generate → run → check → repeat</strong><br /><span>Done is a four-layer check, or a DMN table, or a merchant signature — never the worker grading itself.</span></div>
+            <span class="pill ep01">EP 01</span>
+          </div>
+          <div class="stack-row" role="listitem">
+            <div class="layer">Control</div>
+            <div><strong>Camunda 8 · BPMN + user tasks</strong><br /><span>The AI Agent Connector hosts the tool loop inside the process. Paused tokens are the product.</span></div>
+            <span class="pill ep02">EP 02–03</span>
+          </div>
+          <div class="stack-row" role="listitem">
+            <div class="layer">Grounding</div>
+            <div><strong>Knowledge base as a process step</strong><br /><span>Retrieve, then answer. What it can’t verify, it doesn’t invent.</span></div>
+            <span class="pill ep02">EP 02</span>
+          </div>
+          <div class="stack-row" role="listitem">
+            <div class="layer">Authority</div>
+            <div><strong>AP2 mandates · ES256 JWS</strong><br /><span>Open mandate (you sign the rules) → closed mandate (agent signs the cart) → merchant verifies the chain.</span></div>
+            <span class="pill ep03">EP 03</span>
+          </div>
+          <div class="stack-row" role="listitem">
+            <div class="layer">Policy</div>
+            <div><strong>DMN decision tables</strong><br /><span>Wealth routing. Spending policy. First-hit rules linked to the process instance, visible in Operate.</span></div>
+            <span class="pill ep03">EP 02–03</span>
+          </div>
+        </div>
+
+        <div class="protocols">
+          <div class="proto">
+            <div class="name">MCP</div>
+            <p>Connects agents to tools and context.</p>
+            <div class="owns">owns the toolbox</div>
+          </div>
+          <div class="proto">
+            <div class="name">A2A</div>
+            <p>Connects agents to other agents.</p>
+            <div class="owns">owns the conversation</div>
+          </div>
+          <div class="proto">
+            <div class="name">AG-UI</div>
+            <p>Connects agents to users — the last mile.</p>
+            <div class="owns">owns the click · EP 02</div>
+          </div>
+          <div class="proto">
+            <div class="name">AP2</div>
+            <p>Connects agents to money, with a signature.</p>
+            <div class="owns">owns the spend · EP 03</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section container" id="curious">
+        <div class="curious">
+          <div>
+            <p class="eyebrow teal">For the extra curious</p>
+            <h2>A visual codemap of every repo in the series.</h2>
+            <p class="lede">
+              Click a node. See the file, what it emits, and what it talks to.
+              Shared DNA across EP 02 and EP 03 — <code>sseHub</code>, the AG-UI client, Zeebe workers —
+              so you can see the pattern, not just the folders.
+            </p>
+            <div class="btn-row">
+              <a class="btn btn-primary" href="codemap.html">Open the codemap</a>
+              <a class="btn btn-ghost" href="codemap.html#shared">Jump to shared DNA</a>
+            </div>
+          </div>
+          <pre class="curious-visual" aria-hidden="true">browser
+  └─ EventSource ──► /api/stream/:pid
+                         │
+                    <span class="hl">sseHub.emit(pid, event)</span>
+                         │
+              ┌──────────┼──────────┐
+              │ workers  │  tasks   │
+              │ intake   │  poller  │
+              │ identity │  HITL    │
+              │ risk     │          │
+              └──────────┼──────────┘
+                         ▼
+                   Camunda 8
+              BPMN · DMN · Operate
+                         │
+                    <span class="ok">token paused</span>
+                    waiting on you</pre>
+        </div>
+      </section>
+
+      <section class="section container" id="next">
+        <div class="next-card">
+          <p class="eyebrow blue">Next up</p>
+          <h2>EP 04 · model routing, and what it costs you to pick wrong.</h2>
+          <p>
+            The inner loop is cheap to start and expensive to run on the wrong model.
+            Routing is the next moat: not “which model is smartest,” but which one is allowed
+            to touch this case, at this temperature, for this cost per decision.
+          </p>
+        </div>
+      </section>
+
+      <section class="section-sm container" id="about">
+        <p class="eyebrow">Behind the series</p>
+        <h2>Zishan Ali Khan</h2>
+        <p class="lede">
+          Enterprise AI GTM &amp; Solutions at Camunda. Day job: putting agents inside real business processes.
+          This series is where each layer gets built end to end, then published for what holds up.
+        </p>
+        <div class="btn-row">
+          <a class="btn btn-ghost" href="https://www.linkedin.com/in/zishanalikhan">LinkedIn</a>
+          <a class="btn btn-ghost" href="https://zishanalikhan.com">zishanalikhan.com</a>
+          <a class="btn btn-ghost" href="https://github.com/letmereviewyourcode">GitHub</a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container foot">
+        <div>Agents, Orchestrated · MIT · 2026 Zishan Ali Khan</div>
+        <div>
+          <a href="https://github.com/letmereviewyourcode/agents-orchestrated">Series hub</a>
+          · <a href="codemap.html">Codemap</a>
+          · <a href="https://www.linkedin.com/in/zishanalikhan">Films</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script src="assets/site.js"></script>
+</body>
+</html>

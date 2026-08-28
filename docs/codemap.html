@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Codemap — Agents, Orchestrated</title>
+  <meta name="description" content="A visual map of the Agents, Orchestrated codebases: loops, AG-UI on Camunda, and AP2 payments. Click a node to see the file." />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="assets/site.css" />
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <div class="wrap">
+    <header class="nav">
+      <a class="brand" href="index.html">
+        <img class="brand-mark" src="assets/favicon.svg" alt="" />
+        <span>
+          <span class="brand-kicker">Series</span>
+          <span class="brand-name">Agents, Orchestrated</span>
+        </span>
+      </a>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="index.html">Series</a>
+        <a href="index.html#episodes">Episodes</a>
+        <a href="codemap.html" aria-current="page" class="nav-cta">Codemap</a>
+        <a href="https://github.com/letmereviewyourcode/agents-orchestrated">GitHub</a>
+      </nav>
+    </header>
+
+    <main id="main" class="container">
+      <header class="cmap-hero">
+        <p class="eyebrow teal">For the extra curious</p>
+        <h1>Visual codemap</h1>
+        <p class="lede">
+          The three public repos as one picture. Nodes are files, protocols, or demo paths.
+          Edges are runtime flow — events, jobs, signatures — not folder nesting.
+        </p>
+      </header>
+
+      <div class="view-tabs" role="tablist" aria-label="Codemap views">
+        <button type="button" role="tab" data-view="stack" aria-selected="true">Series stack</button>
+        <button type="button" role="tab" data-view="ep01">EP 01 loops</button>
+        <button type="button" role="tab" data-view="ep02">EP 02 AURUM</button>
+        <button type="button" role="tab" data-view="ep03">EP 03 AP2</button>
+        <button type="button" role="tab" data-view="shared">Shared DNA</button>
+      </div>
+
+      <h2 id="cmap-title" style="font-size:22px;margin-bottom:6px">The series as one system</h2>
+      <p id="cmap-sub" class="lede" style="font-size:15px;margin-bottom:8px"></p>
+      <div class="legend">
+        <span><i style="background:#ef9f27"></i>amber = the check / the signature</span>
+        <span><i style="background:#1d9e75"></i>teal = a human surface</span>
+        <span><i style="background:#161618"></i>graphite = process, worker, spec</span>
+      </div>
+
+      <div class="cmap-shell">
+        <div class="cmap-stage" id="cmap-stage" aria-live="polite"></div>
+        <aside class="inspector" id="inspector" aria-live="polite"></aside>
+      </div>
+
+      <section class="section" id="axes">
+        <p class="eyebrow">EP 01 · the map inside the film</p>
+        <h2>Two questions define any loop.</h2>
+        <p class="lede" style="margin-bottom:24px">
+          Continuation on the x-axis, locus on the y-axis. The interesting differences all sit on the right:
+          how “done” is decided.
+        </p>
+        <div class="axes">
+          <div class="axis-y"><span>cloud-persistent</span><span>in-session</span></div>
+          <div class="axes-grid">
+            <div class="quad">
+              <strong style="font-size:13px;color:var(--faint)">trigger · cloud</strong><br />
+              <span class="dot">Claude Routines</span>
+              <span class="dot">Antigravity /schedule</span>
+              <span class="dot">Cursor Automations</span>
+            </div>
+            <div class="quad hot">
+              <strong style="font-size:13px;color:var(--amber)">verification · cloud</strong><br />
+              <span class="dot">Codex Goal mode</span>
+              <span class="dot">Antigravity /goal</span>
+            </div>
+            <div class="quad">
+              <strong style="font-size:13px;color:var(--faint)">trigger · session</strong><br />
+              <span class="dot">Claude /loop</span>
+            </div>
+            <div class="quad hot">
+              <strong style="font-size:13px;color:var(--amber)">verification · session</strong><br />
+              <span class="dot">Claude Code /goal</span>
+            </div>
+          </div>
+          <div class="axis-x"><span>gated by a trigger</span><span>gated by verification</span></div>
+        </div>
+      </section>
+
+      <section class="section" id="events">
+        <p class="eyebrow teal">The wire · EP 02–03</p>
+        <h2>Event vocabulary</h2>
+        <p class="lede" style="margin-bottom:24px">
+          Everything the UI does is a typed event on one SSE stream. Same names in AURUM and in AP2.
+        </p>
+        <div class="vocab">
+          <div class="vocab-item"><code>TEXT_MESSAGE_*</code><p>Streaming concierge copy. Start / content delta / end.</p></div>
+          <div class="vocab-item"><code>TOOL_CALL_*</code><p>An agent step with args and results. OperatorView lives on these.</p></div>
+          <div class="vocab-item"><code>GENERATIVE_UI</code><p>A real component: <code>component</code> + <code>props</code>. The donut, the gauge, the mandate card.</p></div>
+          <div class="vocab-item"><code>USER_TASK_PENDING</code><p>A Camunda user task, surfaced as a card. Completing the card completes the job.</p></div>
+          <div class="vocab-item"><code>STEP_STARTED / FINISHED</code><p>Process progress. The operator’s raw log and the customer’s stepper share this.</p></div>
+          <div class="vocab-item"><code>PARTY_HOP</code><p>EP 03 only. Lights the four-party AP2 strip: shopping agent → merchant → credentials → processor.</p></div>
+        </div>
+      </section>
+
+      <section class="section" id="read">
+        <p class="eyebrow">How to read a PR in these repos</p>
+        <h2>Start at the wire, not the model.</h2>
+        <div class="shared-grid">
+          <article class="shared-card">
+            <h3>1. The event</h3>
+            <p>If a card appeared, an event was emitted. Find <code>emit(</code> in the worker. That is the contract.</p>
+          </article>
+          <article class="shared-card">
+            <h3>2. The job</h3>
+            <p>The worker is a Zeebe job. The BPMN task type is the function name. Operate will show the same sequence.</p>
+          </article>
+          <article class="shared-card">
+            <h3>3. The fork</h3>
+            <p>If a human appeared, a DMN table or a user task put them there. The agent did not “decide to escalate.”</p>
+          </article>
+          <article class="shared-card">
+            <h3>4. The proof</h3>
+            <p>EP 01: frame stills. EP 02: operator log. EP 03: merchant signature check. Pick the proof before you pick the model.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-sm" style="padding-bottom:88px">
+        <div class="btn-row">
+          <a class="btn btn-primary" href="index.html">Back to the series</a>
+          <a class="btn btn-ghost" href="https://github.com/letmereviewyourcode/what-are-loops">EP 01 repo</a>
+          <a class="btn btn-ghost" href="https://github.com/letmereviewyourcode/camunda-agui-wealth-demo">EP 02 repo</a>
+          <a class="btn btn-ghost" href="https://github.com/letmereviewyourcode/camunda-ap2-payments-demo">EP 03 repo</a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container foot">
+        <div>Agents, Orchestrated · MIT · 2026 Zishan Ali Khan</div>
+        <div><a href="index.html">Series</a> · <a href="https://github.com/letmereviewyourcode/agents-orchestrated">Hub</a></div>
+      </div>
+    </footer>
+  </div>
+  <script src="assets/site.js"></script>
+  <script src="assets/codemap.js"></script>
+</body>
+</html>

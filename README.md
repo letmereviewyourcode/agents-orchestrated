@@ -9,8 +9,14 @@ toys: every build carries the parts that decide whether agents survive
 production — verification, orchestration, human oversight, grounding, and an
 audit trail.
 
+**[Series webpage](docs/index.html)** · **[Visual codemap](docs/codemap.html)** *(for the extra curious)*
+
 📺 Episodes land on [LinkedIn](https://www.linkedin.com/in/zishanalikhan).
 Every build is a public repo on this profile.
+
+> After GitHub Pages is enabled on this repo (Settings → Pages → Deploy from
+> branch `main` / folder `/docs`), the same pages live at
+> `https://letmereviewyourcode.github.io/agents-orchestrated/`.
 
 ---
 
