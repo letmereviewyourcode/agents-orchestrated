@@ -9,16 +9,8 @@ toys: every build carries the parts that decide whether agents survive
 production — verification, orchestration, human oversight, grounding, and an
 audit trail.
 
-**Visual hub:** [zishanalikhan.com/agents-orchestrated](https://zishanalikhan.com/agents-orchestrated/)
-· **Codemap:** […/codemap](https://zishanalikhan.com/agents-orchestrated/codemap/)
-· **Essays (unchanged):** […/series/agents-orchestrated](https://zishanalikhan.com/series/agents-orchestrated/)
-
 📺 Episodes land on [LinkedIn](https://www.linkedin.com/in/zishanalikhan).
 Every build is a public repo on this profile.
-
-The static files live in [`docs/`](docs/). Map the Vercel app for this repo to
-the hub URL above (root directory: `docs`). That path is currently a 404, so it
-does not override the essay index.
 
 ---
 

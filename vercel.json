@@ -1,5 +1,13 @@
 {
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "installCommand": "echo skip",
+  "buildCommand": "node --test tests/hub.test.mjs",
   "outputDirectory": "docs",
   "cleanUrls": true,
-  "trailingSlash": true
+  "trailingSlash": true,
+  "rewrites": [
+    { "source": "/agents-orchestrated", "destination": "/" },
+    { "source": "/agents-orchestrated/", "destination": "/" },
+    { "source": "/agents-orchestrated/:path*", "destination": "/:path*" }
+  ]
 }

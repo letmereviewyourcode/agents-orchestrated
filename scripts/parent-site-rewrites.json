@@ -1,0 +1,16 @@
+{
+  "rewrites": [
+    {
+      "source": "/agents-orchestrated",
+      "destination": "https://agents-orchestrated-hub.vercel.app/"
+    },
+    {
+      "source": "/agents-orchestrated/",
+      "destination": "https://agents-orchestrated-hub.vercel.app/"
+    },
+    {
+      "source": "/agents-orchestrated/:path*",
+      "destination": "https://agents-orchestrated-hub.vercel.app/:path*"
+    }
+  ]
+}

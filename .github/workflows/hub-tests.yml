@@ -1,0 +1,22 @@
+name: Hub tests
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Local hub structure
+        run: node --test tests/hub.test.mjs
+      - name: Live essays still ship
+        run: node --test tests/live-essays.test.mjs
+      - name: Deployed hub parity
+        run: node --test tests/deployed-parity.test.mjs
+        env:
+          LIVE_HUB_URL: https://zishanalikhan.com/agents-orchestrated/
